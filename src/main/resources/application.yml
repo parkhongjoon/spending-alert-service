@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: SpendingAlertService
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/spendingalertservice?characterEncoding=UTF-8&serverTimezone=Asia/Seoul&useUnicode=true&character_set_server=utf8mb4
+    username: root
+    password: zerobase
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+#jwt:
+#  secret: ????
+
+logging:
+  level:
+    org.hibernate.SQL: debug
