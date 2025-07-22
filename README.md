@@ -59,7 +59,6 @@
 | **Notification** | 알림 발송 이력 (user_id(수신자), sender_id(발송자), message, channel, status 등) |
 | **AlertRule** | 회원별 알림 조건 규칙 (user_id, condition_type, threshold_value, channel 등) |
 
-![ERD](./docs/erd.png)
 
 ---
 
@@ -74,17 +73,8 @@
 
 ---
 
-<<<<<<< HEAD
 ## 6. ERD
 
-| 테이블 | 주요 컬럼 | 설명 |
-|--------|------------|------|
-| User | id, name, email, password, limit_amount, role (User/Admin), created_at, updated_at | 회원/관리자 구분 |
-| Transaction | id, user_id, transaction_date, merchant, amount, category, created_at | 회원 거래 내역 |
-| Budget | id, user_id, category, amount, period_type, created_at | 회원별 소비 목표 |
-| Notification | id, user_id (수신자), sender_id (발송자: 관리자), message, sent_at, channel, status | 알림 발송 이력 |
-| PatternReport | id, user_id, period_start, period_end, compare_group, total_spent, category_summary | 소비 패턴 리포트 |
-| AlertRule | id, user_id, condition_type, threshold_value, channel | 회원별 알림 조건 규칙 |
 
 ![ERD](docs/erd.png)
 
@@ -102,8 +92,7 @@
 
 ## 8. Tech Stack
 =======
-## 6. Tech Stack
->>>>>>> 555a1d25cf9e6ed159c245e549365f5d90d64bad
+
 
 - **Backend:** Java 17+, Spring Boot 3.x, Spring Security, JWT
 - **DB:** MySQL/MariaDB, H2(Test)
