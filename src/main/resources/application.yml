@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: SpendingAlertService
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/spendingalertservice?characterEncoding=UTF-8&serverTimezone=Asia/Seoul&useUnicode=true&character_set_server=utf8mb4
+    username: root
+    password: zerobase
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+jwt:
+  secret: "VGhpcyBpcyBhIHNhbXBsZSBzZWNyZXQga2V5IGZvciBKU1QuLi4="
+  expiration: 3600000 # 1시간
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+
+  config:
+    import: optional:file:.env
+
+mailgun:
+  api:
+    key: ${MAILGUN_API_KEY}
+  domain: sandboxbe02d52884a64f87becb629337bacc8e.mailgun.org
+  from:
+    email: zerobase@naver.com
+
